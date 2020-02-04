@@ -12,7 +12,7 @@ public class Palindrome {
     }
 
 
-     private static void isPalindrome() {
+    private static void isPalindrome() {
         String inputValue;
         Scanner in = new Scanner(System.in);
 

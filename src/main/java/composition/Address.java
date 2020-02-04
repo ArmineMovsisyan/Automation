@@ -15,8 +15,8 @@ public class Address {
 
     }
 
-//    @Override
-//    public String toString() {
-//        return String.format("%s,%s,%s,%f", country, city, address, qk);
-//    }
+    @Override
+    public String toString() {
+        return String.format("%s,%s,%s,%f", country, city, address, qk);
+    }
 }

@@ -30,6 +30,5 @@ public class Main {
     }
 
     private Main() {
-        //this is an empty constructor
     }
 }

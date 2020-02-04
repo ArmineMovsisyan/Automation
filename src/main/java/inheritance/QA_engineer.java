@@ -3,10 +3,14 @@ package inheritance;
 /**
  * Createb BY Armine Movsisyan on Jan
  */
-public class QA_engineer extends Employee {
+ class QA_engineer extends Employee {
+
+private String name;
 
 
-    public QA_engineer(String profession, String company, int salary, int birthYear) {
+
+     QA_engineer(String profession, String company, int salary, int birthYear) {
         super(profession, company, salary, birthYear);
+
     }
 }
