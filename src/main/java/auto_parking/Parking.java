@@ -3,9 +3,9 @@ package auto_parking;
 /**
  * Created BY Armine Movsisyan on 04 February,2020
  */
-public class Parking {
+class Parking {
 
-    public static Car[][] sortCars(Car[] carsToSort) {
+    static Car[][] sortCars(Car[] carsToSort) {
         Car[][] array = new Car[6][6];
 
         for (int i = 0; i < carsToSort.length; i++) {

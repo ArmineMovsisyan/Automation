@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
         Car[] initCars = {
                 new BMW(0, "BMW X6", true, 220, CarType.JEEP),
-                new BMW(50, "BMW 760", true, 320, CarType.SEDAN),
-                new BMW(50, "BMW M3", true, 320, CarType.COUPE),
+                new BMW(0, "BMW 760", true, 320, CarType.SEDAN),
+                new BMW(0, "BMW M3", true, 320, CarType.COUPE),
 
                 new Mercedes(50, "Mercedes AMG S63", true, 220, CarType.COUPE),
                 new Mercedes(60, "Mercedes G500", false, 300, CarType.JEEP),
@@ -17,11 +17,11 @@ public class Main {
 
         };
         trafficCar(initCars[0], 50);
-        trafficCar(initCars[1], 50);
-        trafficCar(initCars[2], 50);
+        trafficCar(initCars[1], 40);
+        trafficCar(initCars[2], 30);
         trafficCar(initCars[3], 60);
-        trafficCar(initCars[4], 60);
-        trafficCar(initCars[5], 60);
+        trafficCar(initCars[4], 65);
+        trafficCar(initCars[5], 20);
         printCars(Parking.sortCars(initCars));
 
     }
@@ -44,9 +44,9 @@ public class Main {
 
     private static void printCars(Car[][] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
+            for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] != null) {
-                    System.out.print(array[i][j] + " ");
+                    System.out.print(array[i][j] + "  ");
                 }
             }
             System.out.println();

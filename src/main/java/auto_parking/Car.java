@@ -28,7 +28,8 @@ public class Car {
         return speed + speedToAdd;
     }
 
-    void reduceSpeed(int speed, int speedToReduce) {
+    void reduceSpeed(int speed, int speedToReduce)
+    {
         speed -= speedToReduce;
     }
 
