@@ -53,7 +53,7 @@ public class Parking {
 
     }
 
-    public void test(int index) {
+    public void checkIndex(int index) {
         if (index < arr.length - 1) {
             System.out.println("Your index is corresponds to array index!");
         } else {

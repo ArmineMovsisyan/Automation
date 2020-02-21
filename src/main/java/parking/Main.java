@@ -9,12 +9,12 @@ public class Main {
 
         park.addCarInParking(mercedes);
         park.addCarInParking(bmw);
-        park.test(5);
-        park.checkNumber(bmw.getCarNumber().length(),9 );
+        park.checkIndex(5);
+        park.checkNumber(bmw.getCarNumber().length(), 9);
 
         park.checkSpeed(mercedes.getCurrentSpeed(), 40);
         try {
-            park.checkParkingPlace(3,3);
+            park.checkParkingPlace(1, 2);
         } catch (CheckedException e) {
             e.printStackTrace();
         }

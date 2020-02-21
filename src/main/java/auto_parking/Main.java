@@ -5,8 +5,10 @@ package auto_parking;
  */
 
 public class Main {
-    public static void main(String[] args) {
-        Car[] initCars = {
+
+
+    public static Car[] addObject() {
+      Car[] initCars = {
                 new BMW(0, "BMW X6", true, 220, CarType.JEEP),
                 new BMW(0, "BMW 760", true, 320, CarType.SEDAN),
                 new BMW(0, "BMW M3", true, 320, CarType.COUPE),
@@ -14,19 +16,24 @@ public class Main {
                 new Mercedes(50, "Mercedes AMG S63", true, 220, CarType.COUPE),
                 new Mercedes(60, "Mercedes G500", false, 300, CarType.JEEP),
                 new Mercedes(75, "Mercedes E320", true, 320, CarType.SEDAN)
-
         };
-        trafficCar(initCars[0], 50);
-        trafficCar(initCars[1], 40);
-        trafficCar(initCars[2], 30);
-        trafficCar(initCars[3], 60);
-        trafficCar(initCars[4], 65);
-        trafficCar(initCars[5], 20);
-        printCars(Parking.sortCars(initCars));
+        return initCars;
 
     }
 
-    private static void trafficCar(Car car, int speedToAdd) {
+    public static void main(String[] args) {
+
+        trafficCar(addObject()[0], 50);
+        trafficCar(addObject()[1], 40);
+        trafficCar(addObject()[2], 30);
+        trafficCar(addObject()[3], 60);
+        trafficCar(addObject()[4], 65);
+        trafficCar(addObject()[5], 20);
+        printCars(Parking.sortCars(addObject()));
+
+    }
+
+    public static void trafficCar(Car car, int speedToAdd) {
         int speed = car.getSpeed();
         if (car.getStateEngine()) {
             if (car.getSpeed() != 0 || car.getSpeed() < car.getMaxSpeed()) {
@@ -42,7 +49,7 @@ public class Main {
         }
     }
 
-    private static void printCars(Car[][] array) {
+    public static void printCars(Car[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] != null) {

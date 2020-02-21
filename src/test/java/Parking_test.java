@@ -19,6 +19,12 @@ public class Parking_test {
         parkedCars = Parking.sortCars(Main.addObject());
     }
 
+    @Test(expectedExceptions = ArrayIndexOutOfBoundsException.class)
+    public void checkMethod() {
+        System.out.println("Exception");
+
+    }
+
 
     @Test
     public void checkParkingFirstFloor() {
