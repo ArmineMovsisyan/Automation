@@ -1,9 +1,11 @@
-package example;
+package parking;
 
-public class Kia extends Car {
-    Kia (String model, CarType type){
+public class BMW extends Car {
+    BMW(String model, CarType type,String carNumber,int currentSpeed){
         setModel(model);
         setType(type);
+        setCarNumber(carNumber);
+        setCurrentSpeed(currentSpeed);
     }
 
     @Override
@@ -26,6 +28,5 @@ public class Kia extends Car {
         }
 
     }
-
 
 }
